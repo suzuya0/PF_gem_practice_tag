@@ -1,0 +1,13 @@
+<h1>Books#edit</h1>
+
+<%= form_with model: @book, local:true do |f| %>
+  <%= f.label :title, "書籍名" %>
+  <%= f.text_field :title %>
+  <%= f.label :content, "内容" %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
+
+ <%= link_to "詳細", book_path(@book.id) %> 
+ <%= link_to "一覧", books_path %>
+ 
