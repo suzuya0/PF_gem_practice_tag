@@ -2,6 +2,10 @@
 
 <h3><%= @book.title %></h3>
 <%= @book.content %>
-
+<br>
+<% @book.tag_list.each do |tag| %>
+<%= tag %>
+<% end %>
+<br>
 <%= link_to "編集", edit_book_path(@book.id) %>
 <%= link_to "一覧", books_path %>
